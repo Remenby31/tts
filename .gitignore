@@ -1,0 +1,33 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+.ruff_cache/
+
+# Models (too large for git)
+models/
+
+# Fish Speech upstream (submodule or separate)
+fish-speech-upstream/
+
+# Voice samples (large audio files)
+voices/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Runtime
+*.log
+*.sock

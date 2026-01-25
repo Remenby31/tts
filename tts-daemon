@@ -1,0 +1,5 @@
+#!/bin/bash
+# TTS Daemon wrapper
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+export TTS_MODEL="$SCRIPT_DIR/models/openaudio-s1-mini"
+exec "$SCRIPT_DIR/.venv/bin/python" "$SCRIPT_DIR/src/daemon.py" "$@"

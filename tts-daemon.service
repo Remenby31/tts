@@ -1,0 +1,17 @@
+[Unit]
+Description=TTS Daemon (Fish Speech)
+After=default.target
+
+[Service]
+Type=simple
+ExecStart=%h/projects/tts/tts-daemon
+Restart=on-failure
+RestartSec=5
+Environment=TTS_SOCKET=/tmp/tts.sock
+Environment=TTS_DEVICE=cuda
+
+# Memory management
+MemoryMax=8G
+
+[Install]
+WantedBy=default.target
